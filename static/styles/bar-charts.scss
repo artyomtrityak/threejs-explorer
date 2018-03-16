@@ -1,0 +1,67 @@
+.bar-chart {
+  &--basic {
+    rect {
+      fill: steelblue;
+    }
+
+    text {
+      fill: white;
+      font: 10px sans-serif;
+      text-anchor: end;
+    }
+  }
+
+  &--div {
+    background-color: green;
+    border: 1px solid white;
+    width: 0px;
+    text-align: right;
+  }
+
+  &--stack {
+    rect:hover {
+      stroke: blueviolet;
+      stroke-width: 2;
+    }
+  }
+
+  &--axis-with-lines {
+    .axis {
+      path,
+      line {
+        fill: none;
+        stroke: gray;;
+      }
+
+      text {
+        font: 10px sans-serif;
+        fill: #000;
+      }
+    }
+  }
+
+  .axis {
+    path,
+    line {
+      fill: none;
+      stroke: #000;
+    }
+
+    text {
+      font: 10px sans-serif;
+      fill: #000;
+    }
+  }
+
+  .added {
+    rect {
+      fill: blueviolet !important;
+    }
+  }
+
+  .updated {
+    rect {
+      fill: orange !important;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import './bar-charts.scss';
+@import './circle-charts.scss';
+@import './line-charts.scss';
+@import './pie-charts.scss';
+@import './force-charts.scss';
+@import './tree-charts.scss';
+
+.chart-container {
+  padding: 10px;
+}
