@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Route } from "react-router-dom";
 import BasicScene from "./basic-scene";
-import LinesAndTextScene from "./lines-and-text";
+import TextsScene from "./texts-scene";
 
 export default class BasicSceneScreen extends React.Component {
   constructor(props) {
@@ -18,20 +18,20 @@ export default class BasicSceneScreen extends React.Component {
       <div>
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <NavLink activeClassName="active" className="nav-link" to={`${match.url}/scene`}>
-              Scene
+            <NavLink activeClassName="active" className="nav-link" to={`${match.url}/scene-and-objects`}>
+              Scene and Objects
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink activeClassName="active" className="nav-link" to={`${match.url}/lines-and-text`}>
-              Lines and Text
+            <NavLink activeClassName="active" className="nav-link" to={`${match.url}/texts`}>
+              Texts
             </NavLink>
           </li>
         </ul>
 
         <div className="tree-charts-container">
-          <Route path={`${match.url}/scene`} component={BasicScene} />
-          <Route path={`${match.url}/lines-and-text`} component={LinesAndTextScene} />
+          <Route path={`${match.url}/scene-and-objects`} component={BasicScene} />
+          <Route path={`${match.url}/texts`} component={TextsScene} />
         </div>
       </div>
     );
