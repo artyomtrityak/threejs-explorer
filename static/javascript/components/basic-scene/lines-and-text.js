@@ -1,11 +1,10 @@
 import React from "react";
 import * as THREE from "three";
 
-export default class TreeChart extends React.Component {
+export default class LinesAndTextsScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cube: null,
       scene: null,
       camera: null,
       initialized: false
@@ -26,14 +25,10 @@ export default class TreeChart extends React.Component {
 
     this.containerRef.appendChild(renderer.domElement);
 
-    const cube = this.getCube();
-    scene.add(cube);
-
     this.setState({
       scene,
       camera,
       renderer,
-      cube,
       initialized: true
     });
 
@@ -41,22 +36,12 @@ export default class TreeChart extends React.Component {
     this.animate();
   }
 
-  getCube() {
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00FF00 });
-
-    return new THREE.Mesh(geometry, material);
-  }
-
   animate() {
     requestAnimationFrame(this.animate);
     if (!this.state.initialized) {
       return;
     }
-    const { cube, renderer, scene, camera } = this.state;
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    const { renderer, scene, camera } = this.state;
     renderer.render(scene, camera);
   }
 

@@ -17,8 +17,8 @@ export default class MainMenu extends React.Component {
         <ul className="nav justify-content-center mb-5">
           <a className="navbar-brand" href="#/">Three.js Explorer</a>
 
-          <li className={cn("nav-item", {"active": matchPath(pathname, {path: '/basic-scene'}) || pathname === '/'})}>
-            <NavLink activeClassName="disabled" className="nav-link" to="/basic-scene">Basic scene</NavLink>
+          <li className={cn("nav-item", {"active": matchPath(pathname, {path: '/basic'}) || pathname === '/'})}>
+            <NavLink activeClassName="disabled" className="nav-link" to="/basic">Basic</NavLink>
           </li>
         </ul>
       </Fragment>

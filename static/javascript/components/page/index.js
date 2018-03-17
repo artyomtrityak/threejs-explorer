@@ -15,7 +15,7 @@ export default class Page extends React.Component {
       <HashRouter>
         <div>
           <Route path="/" component={MainMenu}/>
-          <Route path="/basic-scene" component={BasicScene}/>
+          <Route path="/basic" component={BasicScene}/>
         </div>
       </HashRouter>
     );
